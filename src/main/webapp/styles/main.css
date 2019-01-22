@@ -1,0 +1,14 @@
+body {
+    background-color: azure;
+    text-align: center;
+}
+
+.main-container {
+    width: 500px;
+    display: inline-block;
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+}
