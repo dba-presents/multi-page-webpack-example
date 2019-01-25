@@ -1,5 +1,7 @@
 "use strict";
 
+import '../styles/main.css';
+
 (function() {
     function addRunnerResultToTable(position, runnerName, finalTime) {
         const table = document.getElementById("results");

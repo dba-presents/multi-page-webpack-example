@@ -1,5 +1,7 @@
 "use strict";
 
+import '../styles/main.css';
+
 (function() {
     function addRace(year) {
         var list = document.getElementById("races");
