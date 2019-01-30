@@ -1,0 +1,16 @@
+@import '_variables';
+
+body {
+    background-color: $margin-background-color;
+    text-align: center;
+
+    .main-container {
+        width: $content-width;
+        display: inline-block;
+        background-color: $content-background-color;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}
