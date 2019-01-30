@@ -1,6 +1,6 @@
 "use strict";
 
-import '../styles/main.css';
+import '../styles/main.scss';
 
 (function() {
     function addRace(year) {
