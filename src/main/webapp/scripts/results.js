@@ -1,6 +1,7 @@
 "use strict";
 
 import '../styles/main.scss';
+import * as urlParams from './urlparams.js';
 
 (function() {
     function addRunnerResultToTable(position, runnerName, finalTime) {
@@ -12,8 +13,7 @@ import '../styles/main.scss';
     }
 
     function getYearFromUrl() {
-        const url = new URL(window.location.href);
-        return url.searchParams.get("year");
+        return urlParams.getUrlParam("year");
     }
 
     function showResults(show) {
