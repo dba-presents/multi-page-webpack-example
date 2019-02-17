@@ -2,14 +2,11 @@
 
 import '../styles/main.scss';
 import * as urlParams from './urlparams.js';
+import $ from 'jquery';
 
-(function() {
+(function($) {
     function addRunnerResultToTable(position, runnerName, finalTime) {
-        const table = document.getElementById("results");
-        const row = table.insertRow(position);
-        row.insertCell(0).innerHTML = position;
-        row.insertCell(1).innerHTML = runnerName;
-        row.insertCell(2).innerHTML = finalTime;
+        $("#results").append("<tr><td>" + position + "</td><td>" + runnerName + "</td><td>" + finalTime + "</td>");
     }
 
     function getYearFromUrl() {
@@ -18,12 +15,12 @@ import * as urlParams from './urlparams.js';
 
     function showResults(show) {
         if (show) {
-            document.getElementById("resultsNotAvailable").style.display = "none";
-            document.getElementById("results").style.display = "block";
+            $('#resultsNotAvailable').hide();
+            $('#results').show();
         }
         else {
-            document.getElementById("resultsNotAvailable").style.display = "block";
-            document.getElementById("results").style.display = "none";
+            $('#resultsNotAvailable').show();
+            $('#results').hide();
         }
     }
 
@@ -39,4 +36,4 @@ import * as urlParams from './urlparams.js';
             showResults(false);
         }
     });
-})();
+})($);

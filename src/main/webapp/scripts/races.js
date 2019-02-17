@@ -1,16 +1,12 @@
 "use strict";
 
 import '../styles/main.scss';
+import $ from 'jquery';
 
-(function() {
+(function($) {
     function addRace(year) {
-        var list = document.getElementById("races");
-        var item = document.createElement("li");
-        var link = document.createElement("a");
-        link.href = "results.html?year=" + year;
-        link.appendChild(document.createTextNode(year));
-        item.appendChild(link);
-        list.appendChild(item);
+        const hlink = "results.html?year=" + year;
+        $("#races").append("<li><a href='" + hlink + "'>" + year + "</a></li>")
     }
 
     window.onload = (function () {
@@ -18,4 +14,4 @@ import '../styles/main.scss';
         addRace("2017");
     });
 
-})();
+})($);
