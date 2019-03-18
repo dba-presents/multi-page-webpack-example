@@ -1,5 +1,6 @@
 "use strict";
 
+import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/main.scss';
 import * as urlParams from './urlparams.js';
 import $ from 'jquery';
