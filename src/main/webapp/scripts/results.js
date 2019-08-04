@@ -28,9 +28,11 @@ import $ from 'jquery';
     window.onload = (function() {
         const year = getYearFromUrl();
         if (year === "2017") {
-            addRunnerResultToTable(1, "Thomas Faster", "2:08:14");
-            addRunnerResultToTable(2, "Adam Gorecki", "2:09:02");
-            addRunnerResultToTable(3, "Nick Alwayslast", "2:09:33");
+            [{position: 1, runner: "Thomas Faster", time: "2:08:14"},
+                {position: 2, runner: "Adam Gorecki", time: "2:09:02"},
+                {position: 3, runner: "Nick Alwayslast", time: "2:09:33"}
+            ].forEach(r => addRunnerResultToTable(r.position, r.runner, r.time));
+
             showResults(true);
         }
         else {
