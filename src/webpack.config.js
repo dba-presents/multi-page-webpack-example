@@ -49,5 +49,10 @@ module.exports = {
             }
         ],
     },
-    watch: true
+    watch: true,
+    devServer: {
+        contentBase: __dirname + "/main/webapp/dist/",
+        compress: true,
+        port: 9000
+    }
 };
